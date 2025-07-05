@@ -1,0 +1,4 @@
+In object-oriented programming, a Java singleton class is a class that can have only one object (an instance of the class) at a time. 
+After the first time, if we try to instantiate the Java Singleton classes, the new variable also points to the first instance created. 
+So, whatever modifications we do to any variable inside the class through any instance, affect the variable of the single instance created and are visible if we access that variable through any variable of that class type defined.
+
