@@ -1,0 +1,37 @@
+/*
+ * Static block is only excuted once when the class is loaded into memory.
+ * It is used to initialize static variables or perform any one-time setup for the class.
+ * When the second object is created of the class, the static block is not executed again.
+ */
+public class demo {
+  static int v1 = 10;
+  static int v2;
+  static{
+    System.out.println("Static block executed");
+    v2 = v1*2;
+  }
+
+  public static void main(String[] args) {
+    demo obj = new demo();
+    System.out.println("Value of v1: " + demo.v1);
+    System.out.println("Value of v2: " + demo.v2);
+
+    demo.v2 += 500;
+    System.out.println("We manually updated the values of v2 to = " + demo.v2);
+
+    demo obj2 = new demo();
+    System.out.println("Value of v1: " + demo.v1);
+    System.out.println("Value of v2: " + demo.v2);
+
+
+  }
+}
+// Output: 
+/*
+Static block executed
+Value of v1: 10
+Value of v2: 20
+We manually updated the values of v2 to = 520
+Value of v1: 10
+Value of v2: 520
+ */
