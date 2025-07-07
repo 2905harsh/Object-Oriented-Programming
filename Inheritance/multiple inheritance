@@ -1,0 +1,26 @@
+class A {
+    void show() {
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+    void show() {
+        System.out.println("B");
+    }
+}
+
+class C extends A {
+    void show() {
+        System.out.println("C");
+    }
+}
+
+// class D extends B, C { }  // Not allowed
+
+Ambiguity:
+
+If D tries to call show(), should it inherit from B or C?
+
+This ambiguity is known as the Diamond Problem.
+Allowing multiple inheritance via interfaces only (because interfaces don’t have method bodies until Java 8+, and even then Java uses conflict resolution rules).
