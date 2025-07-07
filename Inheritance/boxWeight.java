@@ -13,7 +13,7 @@ public class boxWeight extends box{
 
   boxWeight(boxWeight other){
     super(other);  // Call the copy constructor of the parent class to copy length, width, and height
-    // We are passing 'other' which is of boxWeight type to call the parent class's copy constructor which takes old of box type. 
+    // We are passing 'other' which is of boxWeight type to call the parent class's copy constructor which takes 'old' of box type. 
     // But this does not give error because boxWeight have the access to parent class members and can be used there.
     this.weight = other.weight;  // Copy the weight property
   }
