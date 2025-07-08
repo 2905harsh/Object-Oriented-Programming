@@ -1,0 +1,45 @@
+Abstraction
+
+Definition:
+Abstraction is the concept of hiding unnecessary details from the user and only exposing essential features.
+
+Real-Life Example:
+Consider a car. When you want to drive, you simply press the start button or turn the key. You don’t need to know how the engine starts, how fuel is injected, or how combustion occurs. These internal mechanisms are hidden, and you interact only with simple controls. That’s abstraction — showing only what’s needed.
+
+Purpose:
+	•	To reduce complexity.
+	•	To focus on what an object does, not how it does it.
+	•	Makes systems easier to use and modify.
+
+Key Characteristics:
+	•	Hides complex implementation.
+	•	Provides a clean and user-friendly interface.
+	•	Helps in achieving modularity and separation of concerns.
+	•	Operates at the design level of a system.
+
+Example in Daily Life:
+	•	Using a remote control: You press a button to change the channel but don’t know how signals are transmitted.
+	•	Using a smartphone: You tap an icon, and the app opens — you don’t see the backend logic.
+
+🔹 Encapsulation
+
+Definition:
+Encapsulation is the process of wrapping data and its related operations (methods) into a single unit and restricting direct access to some of the object’s components for security and integrity.
+
+Real-Life Example:
+Think of a medicine capsule — different ingredients are sealed inside one shell. You can’t directly see or alter what’s inside. Similarly, in software, data is hidden within a unit (like a class), and access is provided only through controlled mechanisms.
+
+Purpose:
+	•	To ensure data protection and integrity.
+	•	To control how data is accessed or modified.
+	•	To prevent accidental interference with internal object state.
+
+Key Characteristics:
+	•	Data is shielded from external modification.
+	•	Access is provided through well-defined methods or interfaces.
+	•	Helps in maintenance, security, and modularity.
+	•	Operates at the implementation level.
+
+Example in Daily Life:
+	•	ATM Machine: You insert your card and interact via a screen. You cannot see or access the internal cash counter directly.
+	•	Bank Account: You can’t access the internal data directly; you use the bank interface (ATM, app) to deposit, withdraw, or view details.
