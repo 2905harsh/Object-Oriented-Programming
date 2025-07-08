@@ -1,0 +1,24 @@
+Poly - means many
+Morphism - means Ways to represent
+
+So polymorphism means Many ways to represent a single item.
+
+-----------------------------------------------------------
+---TYPES OF POLYMORPHISM---
+
+1) Compile Time / Static Polymorphism
+
+    x) Achieved via Method Overloading 
+       -> Method Overloading - Same name of function but differs in return type , types of arguments,number of arguments.
+       Eg) Multiple Constructors
+           A a = new A();
+           A a = new A(int a , int b);
+
+    x) Java determines which constructor or method will be called at compile time.That's why it is called as Compile time polymorphism.
+
+2) Run Time / Dynamic Polymorphism
+   
+   x) Achieved by Method overriding.
+     -> Method overriding - Method overriding in Java allows a subclass to provide a specific implementation for a method already defined in its superclass.The method in the subclass must have the same signature (name, return type or covariant type, and parameters) as the superclass method.
+     
+
