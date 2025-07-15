@@ -18,3 +18,5 @@ IMPORTANT POINTS
 5. We can make static methods in abstract classes. They can be accesed via Abstract class name.
 6. We can have normal methods inside the abstract class.
 7. Abstract class name can be used as a reference variable for making object of child class .This is due to run time polymorphism.
+8. You cannot have final abstract class because final keyword restrict the class to be inherited.
+9.We can have an abstract class without any abstract method.
