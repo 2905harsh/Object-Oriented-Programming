@@ -10,3 +10,11 @@ When a class contains one or more abstract methods, it must also be declared abs
 
 This design approach is particularly useful when you're implementing a common interface or defining a framework where the base class provides shared behavior, and the subclasses fill in the specific logic.
 
+IMPORTANT POINTS
+1. We can have variables inside the abstract classes.
+2. We can have constructor of abstract class and can be called using super keyword in subclass because we cannot make object of abstract class.
+3. We cannot have abstract constructors.
+4. We cannot create abstract static methods because static methods cannot be overridden , but abstract must be overridden so we cannot make abstract static method.
+5. We can make static methods in abstract classes. They can be accesed via Abstract class name.
+6. We can have normal methods inside the abstract class.
+7. Abstract class name can be used as a reference variable for making object of child class .This is due to run time polymorphism.
