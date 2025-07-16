@@ -1,2 +1,46 @@
 An interface is a completely "abstract class" that is used to group related methods with empty bodies:
 
+1.Interface methods do not have a body – the actual implementation (method body) is provided by the class that implements the interface.
+
+2.When a class implements an interface, it must override and provide concrete implementations for all of the interface’s methods.
+
+3.By default, interface methods are public and abstract, even if you don’t explicitly declare them so.
+
+4.Interface attributes (variables) are by default public, static, and final – meaning they are constants and shared across all implementing classes.
+
+5.An interface cannot have a constructor, because interfaces cannot be instantiated directly.
+
+
+When working with classes in Java, there's a strict hierarchy: child classes are aware of their parent classes, but parent classes have no knowledge of their children. This creates a dependency during compilation.
+
+If a method defined in a parent class is invoked through a child class, both the child and the parent class must be present at compile time so the compiler can verify type compatibility and ensure correctness.
+
+This often leads to a design issue: to make more functionality available to child classes, developers start pushing common methods higher up in the inheritance hierarchy. Over time, the parent class becomes bloated with unrelated functionalities — a clear violation of good design principles.
+
+Now suppose two child classes (say Dog and Cat) both need a method like breathe().
+
+At first, this method might exist only in the Dog class.
+
+But since Cat also needs it, instead of duplicating the code in both classes, a developer might decide to move that method up to a common parent class, like Animal, so that both child classes can inherit it.
+
+This process is called "pushing a method up" in the class hierarchy — meaning you're moving shared functionality to a more general parent class, higher in the inheritance chain.
+
+Why this becomes a problem:
+
+ 1 As more unrelated methods are pushed up:
+
+ 2 The parent class becomes bloated with methods it shouldn’t care about.
+
+ 3 It violates the Single Responsibility Principle.
+
+ 4 You start forcing all child classes to inherit behavior they may not actually need.
+
+This is where interfaces come into play.
+
+// Power of Interfaces
+Interfaces decouple the method definition from the class hierarchy. Unlike inheritance, where functionality is passed down, an interface allows a class to declare a contract independently of its position in the class tree.
+
+Two or more classes, even if they are completely unrelated in terms of inheritance, can implement the same interface. This promotes flexibility, modularity, and better code organization. It enables a more composition-over-inheritance approach, which is generally preferred in modern design.
+
+
+
