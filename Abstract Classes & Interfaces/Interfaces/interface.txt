@@ -43,4 +43,37 @@ Interfaces decouple the method definition from the class hierarchy. Unlike inher
 Two or more classes, even if they are completely unrelated in terms of inheritance, can implement the same interface. This promotes flexibility, modularity, and better code organization. It enables a more composition-over-inheritance approach, which is generally preferred in modern design.
 
 
+Default Implementation in Interfaces
 
+Traditionally in Java, interfaces could only declare methods, not define them.
+But since Java 8, interfaces can now have default methods with actual implementations using the default keyword.
+
+They solve a big problem:
+
+When a new method is added to an interface, all implementing classes break unless they implement it too.
+
+Default methods solve this by allowing the interface to provide a default behavior, so existing classes don’t break.
+
+interface Animal {
+    void eat();  // abstract method
+
+    default void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+class Dog implements Animal {
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    // Inherits sleep() from interface, no need to override unless needed
+}
+
+Dog d = new Dog();
+d.eat();   // Dog is eating
+d.sleep(); // Sleeping...
+
+Yes! The implementing class can override the default method if it wants a different behavior.
+
+Diamond Problem
+If two interfaces provide default methods with the same signature, and a class implements both — you must override the method in your class to resolve the conflict.
