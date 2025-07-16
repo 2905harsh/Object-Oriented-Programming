@@ -74,6 +74,19 @@ d.eat();   // Dog is eating
 d.sleep(); // Sleeping...
 
 Yes! The implementing class can override the default method if it wants a different behavior.
-
 Diamond Problem
 If two interfaces provide default methods with the same signature, and a class implements both — you must override the method in your class to resolve the conflict.
+
+
+
+// Static Methods in Interfaces
+
+1.Interfaces can now contain static methods with implementation.
+2.These methods belong to the interface itself, not to any object or implementing class.
+interface Utility {
+    static void printMessage() {
+        System.out.println("Static method in interface");
+    }
+}
+Call like this: Utility.printMessage();
+
